@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入vue的核心外部文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+            <input type="radio" value="yan" name="star"v-model="name"/>杨幂
+            <input type="radio" value="liu" name="star"v-model="name"/>刘诗诗
+            <input type="radio" value="gu" name="star"v-model="name"/>古丽娜扎<br/>
+
+            <img v-if="name=='yan'" style="width:200px;height:300px;"src="https://gss0.bdstatic.com/-4o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=d78787bcd5c451dae2fb04b9d7943903/b219ebc4b74543a94e74e52e16178a82b80114e0.jpg"/>
+            <img v-else-if="name=='liu'" style="width:200px;height:300px;"src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=1ccd3305d1c8a786aa27425c0660a258/5366d0160924ab18aef972c835fae6cd7a890b65.jpg"/>
+            <img v-else-if="name=='gu'" style="width:200px;height:300px;"src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=808dac6e4aed2e73e8e48e7ee668caee/a8ec8a13632762d041f4e755a0ec08fa503dc616.jpg"/>
+            <img v-else style="width:200px;height:300px;"src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=1f8e5080f3faaf5190ee89eded3dff8b/cdbf6c81800a19d86dab7ca33dfa828ba71e46e8.jpg"/>
+
+        </div>
+    <script>
+        var app=new Vue({
+            el:"#app",
+            data:{
+                show:'false',
+                name:""
+
+            }
+        })
+    </script>
+</body>
+</html>
